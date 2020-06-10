@@ -128,7 +128,7 @@ _N/A_ - 6/6/2020
 
 ## gh-pages
 
-WiseFool92.github.io/TravelApi
+WiseFool92.github.io/PupperClient
 
 ## Support
 
