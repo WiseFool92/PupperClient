@@ -55,5 +55,10 @@ namespace PupperClient.Models
       string jsonDoggo = JsonConvert.SerializeObject(doggo);
       var apiCallTask = ApiHelper.Put(doggo.DoggoId, jsonDoggo);
     }
+
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
   }
 }
