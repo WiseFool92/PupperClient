@@ -1,0 +1,17 @@
+<h1>All Doggos:</h1>
+
+<ol>
+@foreach (Doggo doggo in Model)
+{
+    <ul>
+        <li>ID: @doggo.DoggoId</li>
+        <li>Name: @doggo.Name</li>
+        <li>Species: @doggo.Breed</li>
+        <li>Age: @doggo.Age</li>
+        <li>Gender: @doggo.Gender</li>
+        <li>Picture: @doggo.PicUrl</li>
+    </ul>
+    <a href="/Doggos/Details/@(doggo.DoggoId)"><p>View Details</p></a>
+    <br>
+}
+</ol>

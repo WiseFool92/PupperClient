@@ -32,5 +32,16 @@ namespace PupperClient.Models
 
       return doggoList;
     }
+
+    public static Doggo GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Doggo doggo = JsonConvert.DeserializeObject<Doggo>(jsonResponse.ToString());
+
+      return doggo;
+    }
   }
 }
