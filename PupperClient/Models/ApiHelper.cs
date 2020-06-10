@@ -21,6 +21,13 @@ namespace PupperClient.Models
       return response.Content;
     }
 
-    
+    public static async Task Post(string newDoggo)
+    {
+      RestClient client = new RestClient("http://localhost:5000/api");
+      RestRequest request = new RestRequest($"doggos", Method.POST);
+      request.AddHeader("Content-Type", "application/json");
+      request.AddJsonBody(newDoggo);
+      var response = await client.ExecuteTaskAsync(request);
+    }
   }
 }

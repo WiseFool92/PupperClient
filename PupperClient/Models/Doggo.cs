@@ -43,5 +43,11 @@ namespace PupperClient.Models
 
       return doggo;
     }
+
+    public static void Post(Doggo doggo)
+    {
+      string jsonDoggo = JsonConvert.SerializeObject(doggo);
+      var apiCallTask = ApiHelper.Post(jsonDoggo);
+    }
   }
 }
